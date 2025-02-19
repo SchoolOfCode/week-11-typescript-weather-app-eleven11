@@ -1,3 +1,4 @@
+"use client";
 import WeatherResult from "./Components/WeatherResult";
 import WeatherSearch from "./Components/WeatherSearch";
 import { useState } from "react";
@@ -21,18 +22,19 @@ export default function Home() {
     } catch (error) {
       console.error(`Error fetching data:`, error);
     }
-
-    return (
-      <div>
-        <main className="flex-grow container mx-auto px-4">
-          <WeatherSearch
-            className="py-11"
-            search={searchQuery}
-            setSearch={setSearchQuery}
-          />
-          <WeatherResult />
-        </main>
-      </div>
-    );
   };
+
+  return (
+    <div>
+      <main className="flex-grow container mx-auto px-4">
+        <WeatherSearch
+          className="py-11"
+          search={searchQuery}
+          setSearch={setSearchQuery}
+          searchFunction={handleSearch}
+        />
+        <WeatherResult currentWeather={weatherData} />
+      </main>
+    </div>
+  );
 }
