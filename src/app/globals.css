@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #e6f2ff;
+  --foreground: #333333;
+  --primary: #3498db;
+  --secondary: #2980b9;
+  --accent: #f39c12;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--secondary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.weather-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.weather-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.weather-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+  background-color: var(--secondary);
+}
+
+.weather-result {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-result h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
